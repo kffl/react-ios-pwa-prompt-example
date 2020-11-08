@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import PWAPrompt from 'react-ios-pwa-prompt';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <strong>User Agent:</strong> {window.navigator.userAgent}
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/chrisdancee/react-ios-pwa-prompt"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          react-ios-pwa-prompt
         </a>
       </header>
+      <PWAPrompt
+        timesToShow={100000}
+        permanentlyHideOnDismiss={false}
+      />
     </div>
   );
 }
